@@ -31,6 +31,10 @@ public class UserController {
         LOGGER.info("Getting age for: " + username);
         return ResponseEntity.of(store.getAge(username));
     }
-//    @PostMapping("/age")
-//    public ResponseEntity setAge(@RequestParam("username") String username, @RequestParam(""))
+    @PostMapping("/age")
+    public ResponseEntity setAge(@RequestParam("username") String username, @RequestParam("age") int age) {
+        LOGGER.info("Trying to create: " + username + " and set the age to: " + age);
+        store.setUser(username, age);
+        return ResponseEntity.ok().build();
+    }
 }

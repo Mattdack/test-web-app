@@ -15,8 +15,8 @@ public class UserStore {
     private final List<Integer> ages;
 
     public UserStore() {
-        this.usernames = List.of("Matthew");
-        this.ages = List.of(25);
+        this.usernames = new ArrayList<>();
+        this.ages = new ArrayList<>();
     }
 
     public Optional<Integer> getAge(String username) {
